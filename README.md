@@ -1,4 +1,4 @@
-# Simple-CCTV-System-DarkRP
+# Simple-CCTV-System-DarkRP-Sandbox
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2540863059
 
