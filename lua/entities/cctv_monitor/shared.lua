@@ -2,7 +2,11 @@ ENT.Type 		= "anim"
 ENT.Base		= "base_anim" 
 ENT.PrintName	= "CCTV Monitor"
 ENT.Author		= ""
-ENT.Spawnable	= false
+if DarkRP then
+	ENT.Spawnable	= false
+else
+	ENT.Spawnable	= true
+end
 ENT.Category 	= "CCTV"
 ENT.Freeze 		= true
 
