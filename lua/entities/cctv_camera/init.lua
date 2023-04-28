@@ -12,10 +12,18 @@ function ENT:Initialize()
 
 	local owner = self.dt.owning_ent
 	if owner then
-		self:CPPISetOwner(owner)
-		for k, v in pairs(ents.FindByClass("cctv_monitor")) do
-			if v:CPPIGetOwner() == owner then
-				v:SetCCTVCamera(self)
+		if DarkRP then
+			self:CPPISetOwner(owner)
+			for k, v in pairs(ents.FindByClass("cctv_monitor")) do
+				if v:CPPIGetOwner() == owner then
+					v:SetCCTVCamera(self)
+				end
+			end
+		else
+			for k, v in pairs(ents.FindByClass("cctv_monitor")) do
+				if v:GetOwner() == owner then
+					v:SetCCTVCamera(self)
+				end
 			end
 		end
 	end
